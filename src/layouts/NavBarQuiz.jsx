@@ -3,6 +3,7 @@ import { usePaginate } from '../hooks';
 import { useEffect, useState } from 'react';
 import { isQuestionAnswered, quizPage } from '../helpers';
 import { Rectangles } from './components';
+import '../styles/layouts/NavBarQuiz.css';
 
 export const NavBarQuiz = ({ page, setPage }) => {
 

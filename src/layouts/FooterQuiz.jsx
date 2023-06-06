@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { LiterCounter, Wavify } from "../components";
 import { useSelector } from "react-redux";
 import { changeWaveSize, sumValues } from "../helpers";
+import '../styles/layouts/FooterQuiz.css';
 
 export const FooterQuiz = () => {
 

@@ -1,3 +1,4 @@
+import '../styles/layouts/Footer.css';
 
 export const Footer = () => {
 

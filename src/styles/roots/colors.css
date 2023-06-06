@@ -1,6 +1,8 @@
 :root{
 
     --white: #FAFAFA; /* blanco principal */
+    --header-bg: #014397;
+
     --dark-gray: #646464; /* quiz descripción párrafos */
 
     --quiz-prev-page: #014397;
