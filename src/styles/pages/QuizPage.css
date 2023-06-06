@@ -74,7 +74,6 @@
 }
 
 .quiz-container section > div button img {
-    filter: invert();
     width: 20%;
     margin: 0 20px;
 }
@@ -234,7 +233,6 @@
 }
 
 .person-container div button > img {
-    filter: invert();
     width: 100% !important;
     margin: 0 20px;
 }

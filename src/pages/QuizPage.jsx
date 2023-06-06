@@ -14,7 +14,7 @@ export const QuizPage = () => {
   
       <>
   
-        <HeaderQuiz />
+        {/* <HeaderQuiz /> */}
   
         { // solo se renderizará en las preguntas del cuestionario
           page > 0 && page < 16 && <NavBarQuiz page={page} setPage={setPage} />

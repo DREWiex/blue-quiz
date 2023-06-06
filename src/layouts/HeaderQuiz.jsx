@@ -12,7 +12,7 @@ export const HeaderQuiz = () => {
                 <Link to='/'>
 
                     <img
-                        src={`${import.meta.env.VITE_URL_BASE}/assets/logo/logo2.png`}
+                        src={`${import.meta.env.VITE_URL_BASE}/assets/header/logo.png`}
                         alt="Logo Blue"
                         title='Logo Blue'
                     />
