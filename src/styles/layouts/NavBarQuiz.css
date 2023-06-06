@@ -9,6 +9,15 @@
     margin: 0 auto;
 }
 
+.nav-quiz > * {
+    margin: 0 5px;
+}
+
+.nav-quiz button {
+    display: flex;
+    width: 25px;
+}
+
 .nav-quiz-pagination {
     position: relative;
     display: flex;
