@@ -19,13 +19,6 @@ export const QuizQuestion2 = ({ nextPage }) => {
     };
 
 
-    const handlePage = ({ target }) => {
-
-        nextPage();
-
-    };
-
-
     return (
 
         <>
@@ -102,7 +95,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
                     </div>
 
                     <button
-                        onClick={handlePage}
+                        onClick={nextPage}
                     >
                         Continuar
                     </button>

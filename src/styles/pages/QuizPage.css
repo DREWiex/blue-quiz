@@ -199,14 +199,8 @@
     height: fit-content !important;
     min-height: fit-content !important;
     max-height: 100% !important;
-    font-size: unset !important;
-    font-weight: unset !important;
-    text-transform: unset !important;
     padding: 0 !important;
     margin: 0 10px !important;
-    border-radius: 50% !important;
-    color: var(--white);
-    background-color: var(--darkblue-bg-buttons) !important;
 }
 
 .person-container div button > img {
