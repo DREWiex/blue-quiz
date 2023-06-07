@@ -1,5 +1,7 @@
+export * from './Challenges';
 export * from './IntroQuiz';
 export * from './LiterCounter';
+export * from './Product';
 export * from './QuizQuestion1';
 export * from './QuizQuestion2';
 export * from './QuizQuestion3';

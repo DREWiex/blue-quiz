@@ -13,11 +13,7 @@ export const Challenges = ({ addChallenge, cluster }) => {
     return (
 
         <>
-          <img
-            src={`${import.meta.env.VITE_URL_BASE}/assets/images/percentages.png`}
-            alt="porcentajes de huella hídrica"
-            title="Porcentajes"
-          />
+
             <section className='challenges-container'>
 
             
