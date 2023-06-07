@@ -31,7 +31,7 @@ export const questions = [
         answers: [
             { answer_id: 5, answer: 1, liters: 0, euros: 0, pixels: 0 }
         ],
-        icons: [ "/assets/quiz/02/icons/02.png" ],
+        icon: [ "/assets/quiz/02/icons/02.png" ],
         img: "/assets/quiz/02/images/02.png"
     },
 

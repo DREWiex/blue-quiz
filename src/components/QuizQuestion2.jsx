@@ -9,7 +9,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
     const dispatch = useDispatch();
 
-    const { question, description, icons, img } = findQuestion(questions, 2);
+    const { question, description, icon, img } = findQuestion(questions, 2);
 
 
     const handleCount = (ev) => {
@@ -58,7 +58,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                             <img
                                 id="restar"
-                                src={`${import.meta.env.VITE_URL_BASE}/assets/icons/menos.svg`}
+                                src={`${import.meta.env.VITE_URL_BASE}/assets/quiz/02/subtract.png`}
                                 alt="Signo menos"
                                 title="Signo menos"
                             />
@@ -76,7 +76,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
                                     >
 
                                         <img
-                                            src={`${import.meta.env.VITE_URL_BASE}/assets/icons/persona.svg`}
+                                            src={`${import.meta.env.VITE_URL_BASE}${icon}`}
                                             alt="Icono de persona"
                                             title='Icono de persona'
                                         />
@@ -92,7 +92,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                             <img
                                 id="sumar"
-                                src={`${import.meta.env.VITE_URL_BASE}/assets/icons/mas.svg`}
+                                src={`${import.meta.env.VITE_URL_BASE}/assets/quiz/02/add.png`}
                                 alt="Signo más"
                                 title="Signo más"
                             />
