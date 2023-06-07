@@ -1,17 +1,24 @@
-.firstSectionShow {
-   min-height: calc(100vh - (var(--height-standard)));
-   width:100%;
-   background: linear-gradient(#FFF, #6CC2DE);
+
+.results-footprint {
+    display: flex;
+    min-height: calc(100vh - (var(--height-standard)));
+    background: linear-gradient(#FFF, #6CC2DE);
 }
 
 /* PERCENTAGES */
 
+.results-percentages {
+    display: flex;
+}
+
 .percentages-mobile {
-    background-color: red;
+    display: flex;
+    height: 100%;
 }
 
 .percentages-web {
     display: none;
+    height: 100%;
 }
 
 
@@ -29,7 +36,7 @@
     }
     
     .percentages-web {
-        display: initial;
+        display: flex;
     }
   
 } /* 768px end */

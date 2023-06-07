@@ -40,7 +40,7 @@ export const ShowResults = () => {
 
       {/* SECTION RESULTS */}
 
-      <section className='firstSectionShow'>
+      <section className='results-footprint'>
 
         {/* <h1 className='title'>
           Descubre tu huella hídrica
@@ -112,25 +112,29 @@ export const ShowResults = () => {
 
       </section>
 
-      <div className='percentages-mobile'>
+      <section className='results-percentages'>
 
-        <img
-          src={`${import.meta.env.VITE_URL_BASE}/assets/results/percentages/mobile/percentages.png`}
-          alt='Porcentaje huella hídrica genérica'
-          title='Porcentaje huella hídrica genérica'
-        />
+        <div className='percentages-mobile'>
 
-      </div>
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/results/percentages/mobile/percentages.png`}
+            alt='Porcentaje huella hídrica genérica'
+            title='Porcentaje huella hídrica genérica'
+          />
 
-      <div className='percentages-web'>
+        </div>
 
-        <img
-          src={`${import.meta.env.VITE_URL_BASE}/assets/results/percentages/web/percentages.png`}
-          alt='Porcentaje huella hídrica genérica'
-          title='Porcentaje huella hídrica genérica'
-        />
+        <div className='percentages-web'>
 
-      </div>
+          <img
+            src={`${import.meta.env.VITE_URL_BASE}/assets/results/percentages/web/percentages.png`}
+            alt='Porcentaje huella hídrica genérica'
+            title='Porcentaje huella hídrica genérica'
+          />
+
+        </div>
+
+      </section>
 
       <Challenges addChallenge={addChallenge} cluster='saver' />
 
