@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { setCurrentPage } from '../../helpers';
 
 export const quizSlice = createSlice({
 
@@ -63,9 +62,6 @@ export const quizSlice = createSlice({
             quiz14: 0,
         },
 
-        currentPage: 1,
-        quiz2Validate: false,
-        quiz14Validate: false,
         count: ['*'],
         backRequestState:'',
         dataRequestState:'',
@@ -74,9 +70,8 @@ export const quizSlice = createSlice({
 
 
     reducers: {
-        setAnswer1: (state, action) => {
-            state.answers.quiz1 = action.payload.ageRange;
-            state.currentPage = setCurrentPage(2, state.quiz2Validate, state.currentPage);
+        setAnswer1: (state, { payload }) => {
+            state.answers.quiz1 = payload.answer;
         },
 
         setAnswer2: (state, action) => {
@@ -94,17 +89,14 @@ export const quizSlice = createSlice({
                     break;
             };
 
-            state.currentPage = setCurrentPage(3, state.answers.quiz3, state.currentPage);
         },
 
         setAnswer3: (state, action) => {
             state.answers.quiz3 = action.payload.province;
-            state.currentPage = setCurrentPage(4, state.answers.quiz4, state.currentPage);
         },
 
         setAnswer4: (state, { payload }) => {
             state.answers.quiz4 = payload.answer;
-            state.currentPage = setCurrentPage(5, state.answers.quiz5, state.currentPage);
         },
 
         setAnswer5: (state, { payload }) => {
@@ -115,40 +107,36 @@ export const quizSlice = createSlice({
             state.liters.quiz5 = payload.liters;
             state.euros.quiz5 = payload.euros;
             state.pixels.quiz5 = payload.pixels;
-            state.currentPage = setCurrentPage(6, state.answers.quiz6, state.currentPage);
         },
 
-        setAnswer6: (state, action) => {
+        setAnswer6: (state, { payload }) => {
             state.liters.quiz6 = 0;
             state.euros.quiz6 = 0;
             state.pixels.quiz6 = 0;
-            state.answers.quiz6 = action.payload.answer;
-            state.liters.quiz6 = action.payload.liters;
-            state.euros.quiz6 = action.payload.euros;
-            state.pixels.quiz6 = action.payload.pixels;
-            state.currentPage = setCurrentPage(7, state.answers.quiz7, state.currentPage);
+            state.answers.quiz6 = payload.answer;
+            state.liters.quiz6 = payload.liters;
+            state.euros.quiz6 = payload.euros;
+            state.pixels.quiz6 = payload.pixels;
         },
 
-        setAnswer7: (state, action) => {
+        setAnswer7: (state, { payload }) => {
             state.liters.quiz7 = 0;
             state.euros.quiz7 = 0;
             state.pixels.quiz7 = 0;
-            state.answers.quiz7 = action.payload.answer;
-            state.liters.quiz7 = action.payload.liters;
-            state.euros.quiz7 = action.payload.euros;
-            state.pixels.quiz7 = action.payload.pixels;
-            state.currentPage = setCurrentPage(8, state.answers.quiz8, state.currentPage);
+            state.answers.quiz7 = payload.answer;
+            state.liters.quiz7 = payload.liters;
+            state.euros.quiz7 = payload.euros;
+            state.pixels.quiz7 = payload.pixels;
         },
 
-        setAnswer8: (state, action) => {
+        setAnswer8: (state, { payload }) => {
             state.liters.quiz8 = 0;
             state.euros.quiz8 = 0;
             state.pixels.quiz8 = 0;
-            state.answers.quiz8 = action.payload.answer;
-            state.liters.quiz8 = action.payload.liters;
-            state.euros.quiz8 = action.payload.euros;
-            state.pixels.quiz8 = action.payload.pixels;
-            state.currentPage = setCurrentPage(9, state.answers.quiz9, state.currentPage);
+            state.answers.quiz8 = payload.answer;
+            state.liters.quiz8 = payload.liters;
+            state.euros.quiz8 = payload.euros;
+            state.pixels.quiz8 = payload.pixels;
         },
 
         setAnswer9: (state, { payload }) => {
@@ -159,7 +147,6 @@ export const quizSlice = createSlice({
             state.liters.quiz9 = payload.liters;
             state.euros.quiz9 = payload.euros;
             state.pixels.quiz9 = payload.pixels;
-            state.currentPage = setCurrentPage(10, state.answers.quiz10, state.currentPage);
         },
 
         setAnswer10: (state, { payload }) => {
@@ -170,7 +157,6 @@ export const quizSlice = createSlice({
             state.liters.quiz10 = payload.liters;
             state.euros.quiz10 = payload.euros;
             state.pixels.quiz10 = payload.pixels;
-            state.currentPage = setCurrentPage(11, state.answers.quiz11, state.currentPage);
         },
 
         setAnswer11: (state, { payload }) => {
@@ -181,7 +167,6 @@ export const quizSlice = createSlice({
             state.liters.quiz11 = payload.liters;
             state.euros.quiz11 = payload.euros;
             state.pixels.quiz11 = payload.pixels;
-            state.currentPage = setCurrentPage(12, state.answers.quiz12, state.currentPage);
         },
 
         setAnswer12: (state, { payload }) => {
@@ -192,7 +177,6 @@ export const quizSlice = createSlice({
             state.liters.quiz12 = payload.liters;
             state.euros.quiz12 = payload.euros;
             state.pixels.quiz12 = payload.pixels;
-            state.currentPage = setCurrentPage(13, state.answers.quiz13, state.currentPage);
         },
 
         setAnswer13: (state, { payload }) => {
@@ -203,7 +187,6 @@ export const quizSlice = createSlice({
             state.liters.quiz13 = payload.liters;
             state.euros.quiz13 = payload.euros;
             state.pixels.quiz13 = payload.pixels;
-            state.currentPage = setCurrentPage(14, state.quiz14Validate, state.currentPage);
         },
 
         setAnswer14: (state, { payload }) => {
@@ -214,13 +197,12 @@ export const quizSlice = createSlice({
             state.liters.quiz14 = payload.liters;
             state.euros.quiz14 = payload.euros;
             state.pixels.quiz14 = payload.pixels;
-            state.currentPage = setCurrentPage(15, state.answers.quiz15, state.currentPage);
         },
 
-        setAnswer15: (state, action) => {
-            state.answers.quiz15 = action.payload.answer;
-            state.currentPage = setCurrentPage(16, state.answers.quiz13, state.currentPage);
+        setAnswer15: (state, { payload }) => {
+            state.answers.quiz15 = payload.answer;
         },
+
         setRequestState: (state, action) => {
             state.backRequestState = action.payload
         },

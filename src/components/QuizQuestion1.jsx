@@ -12,7 +12,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
   const handleAgeRange = ({ target }) => {
 
-    dispatch(setAnswer1({ ageRange: target.value }));
+    dispatch(setAnswer1({ answer: target.value }));
 
     nextPage();
 
