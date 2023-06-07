@@ -5,16 +5,31 @@ import { questions } from '../data';
 
 export const QuizQuestion2 = ({ nextPage }) => {
 
-    const { count } = useSelector((state) => state.quiz);
+    const { answers, person } = useSelector((state) => state.quiz);
 
     const dispatch = useDispatch();
 
     const { question, description, icon, img } = findQuestion(questions, 2);
 
 
-    const handleCount = (ev) => {
+    const handleClick = ({ target }) => {
 
-        dispatch(setAnswer2({ sign: ev.target.id }));
+        switch (target.id) {
+
+            case 'sumar':
+                answers.quiz2 < 15 && dispatch(setAnswer2({
+                    answer: answers.quiz2 + 1,
+                    operation: target.id
+                }));
+                break;
+
+            case 'restar':
+                answers.quiz2 > 1 && dispatch(setAnswer2({
+                    answer: answers.quiz2 - 1,
+                    operation: target.id
+                }));
+                break;
+        };
 
     };
 
@@ -47,7 +62,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                     <div>
 
-                        <button onClick={handleCount}>
+                        <button onClick={handleClick}>
 
                             <img
                                 id="restar"
@@ -61,7 +76,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
                         <div className='person-wrapper'>
 
                             {
-                                count.map((item, index) => (
+                                person.map((item, index) => (
 
                                     <div
                                         key={index}
@@ -81,7 +96,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                         </div>
 
-                        <button onClick={handleCount}>
+                        <button onClick={handleClick}>
 
                             <img
                                 id="sumar"

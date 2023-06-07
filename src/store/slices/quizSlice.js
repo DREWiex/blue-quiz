@@ -62,7 +62,8 @@ export const quizSlice = createSlice({
             quiz14: 0,
         },
 
-        count: ['*'],
+        person: ['*'],
+
         backRequestState:'',
         dataRequestState:'',
         dataRequest:''
@@ -74,21 +75,9 @@ export const quizSlice = createSlice({
             state.answers.quiz1 = payload.answer;
         },
 
-        setAnswer2: (state, action) => {
-
-            switch (action.payload.sign) {
-
-                case 'sumar':
-                    state.count.length < 15 ? state.count.push('*') : null;
-                    state.answers.quiz2 < 15 ? state.answers.quiz2 = state.answers.quiz2 + 1 : null;
-                    break;
-
-                case 'restar':
-                    state.count.length > 1 ? state.count.pop() : null;
-                    state.answers.quiz2 > 1 ? state.answers.quiz2 = state.answers.quiz2 - 1 : null;
-                    break;
-            };
-
+        setAnswer2: (state, { payload }) => {
+            state.answers.quiz2 = payload.answer;
+            payload.operation == 'sumar' ? state.person.push('*') : state.person.pop();
         },
 
         setAnswer3: (state, action) => {
