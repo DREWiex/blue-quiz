@@ -9,7 +9,7 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
   const { question, description, answers, img } = findQuestion(questions, 3);
 
-  const provinciasEspana = answers[0].answer;
+  const { answer: provinces } = answers;
 
 
   const handleSubmit = (ev) => {
@@ -19,13 +19,13 @@ export const QuizQuestion3 = ({ nextPage }) => {
   }; //!FUNC-HANDLESUBMIT
 
 
-  const handleProvinces = ({ target }) => {
+  const handleChange = ({ target }) => {
 
-    dispatch(setAnswer3({ province: target.value }));
+    dispatch(setAnswer3({ answer: target.value }));
 
     nextPage();
 
-  }; //!FUNC-HANDLEPROVINCES
+  }; //!FUNC-HANDLECHANGE
 
 
   return (
@@ -54,15 +54,12 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
         <form onSubmit={handleSubmit}>
 
-          <select onChange={handleProvinces}>
+          <select onChange={handleChange}>
 
             {
-              provinciasEspana.map((item) => (
+              provinces.map((item) => (
 
-                <option
-                  key={item}>
-                  {item}
-                </option>
+                <option key={item}> {item} </option>
 
               ))
             }

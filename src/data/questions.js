@@ -42,8 +42,7 @@ export const questions = [
         category: "provincia",
         question: "¿En qué provincia vives?",
         description: "El consumo varía según la zona donde vivas",
-        answers: [
-            {
+        answers: {
                 answer_id: 6,
                 answer: [
                   'SELECCIONA', 'Alava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Avila', 'Badajoz', 'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Cantabria', 'Castellón', 'Ciudad Real', 'Córdoba', 'La Coruña', 'Cuenca', 'Gerona', 'Granada', 'Guadalajara', 'Guipúzcoa', 'Huelva', 'Huesca', 'Islas Baleares', 'Jaén', 'León', 'Lérida', 'Lugo', 'Madrid', 'Málaga', 'Murcia', 'Navarra', 'Orense', 'Palencia', 'Las Palmas', 'Pontevedra', 'La Rioja', 'Salamanca', 'Segovia', 'Sevilla', 'Soria', 'Tarragona', 'Santa Cruz de Tenerife', 'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Vizcaya', 'Zamora', 'Zaragoza'
@@ -51,8 +50,7 @@ export const questions = [
                 liters: 0,
                 euros: 0,
                 pixels: 0
-            }
-        ],
+            },
         img: "/assets/quiz/03/images/03.png"
     },
 

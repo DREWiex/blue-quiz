@@ -80,8 +80,8 @@ export const quizSlice = createSlice({
             payload.operation == 'sumar' ? state.person.push('*') : state.person.pop(); // 'person.length' será el total de iconos a renderizar en el map de la QQ2.
         },
 
-        setAnswer3: (state, action) => {
-            state.answers.quiz3 = action.payload.province;
+        setAnswer3: (state, { payload }) => {
+            state.answers.quiz3 = payload.answer;
         },
 
         setAnswer4: (state, { payload }) => {
