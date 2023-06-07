@@ -1,6 +1,5 @@
 
 .results-footprint {
-    display: flex;
     min-height: calc(100vh - (var(--height-standard)));
     background: linear-gradient(#FFF, #6CC2DE);
 }

@@ -27,48 +27,29 @@ export const Footprint = () => {
 
             <section className='results-footprint'>
 
-                <h1 className='title'>
-                    Descubre tu huella hídrica
-                </h1>
+                <h1> Descubre tu huella hídrica </h1>
 
-                <div className='firstDropImage'>
+                <div>
 
-                    <h1 className='dropTitle'>
-                        Huella doméstica
-                    </h1>
+                    <h2> Huella doméstica </h2>
 
+                    <p> {totalLiters} </p>
 
-                    <span className='dropNumbers'>
-                        {totalLiters}
-                    </span>
+                    <p> Litros al día </p>
 
-                    <span className='subDropTitle'>
-                        Litros al dia
-                    </span>
-
-                    <span className='average'>
-                        Media en España 1.350 litros al día
-                    </span>
+                    <p> Media en España: 1.350 litros al día </p>
 
                 </div>
 
-                <div className='secondDropImage'>
+                <div>
 
-                    <h1 className='dropTitle2'>
-                        Gasto anual
-                    </h1>
+                    <h2> Gasto anual </h2>
 
-                    <span className='dropNumbers'>
-                        {totalEuros}
-                    </span>
+                    <p> {totalEuros} </p>
 
-                    <span className='subDropTitle'>
-                        Euros al año
-                    </span>
+                    <p> Euros al año </p>
 
-                    <span className='average'>
-                        Media en España 4.235 euros al año
-                    </span>
+                    <p> Media en España: 4.235 euros al año </p>
 
                 </div>
 
