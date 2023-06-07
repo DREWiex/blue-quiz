@@ -97,32 +97,14 @@
 }
 
 .quiz-container section nav div button {
-    width: 90px;
-    margin: 0 auto 10px;
-    border-radius: 50%;
-}
-
-.quiz-container section nav div button img {
-    filter: invert();
-    padding: 15px;
+    width: 70px;
+    margin: 0 auto;
 }
 
 .quiz-container section nav div p {
     text-align: center;
     font-size: 0.8rem;
     color: var(--dark-gray);
-}
-
-.quiz-prev-page{
-    background-color: var(--quiz-prev-page);
-}
-
-.quiz-current-page{
-    background-color: var(--quiz-current-page);
-}
-
-.quiz-next-page{
-    background-color: var(--quiz-next-page);
 }
 
 

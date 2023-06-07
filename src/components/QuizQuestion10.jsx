@@ -66,7 +66,6 @@ export const QuizQuestion10 = ({ nextPage }) => {
                                 <div key={item.text}>
 
                                     <button
-                                        className={`${item.icon_bg_color}`}
                                         onClick={handlePaginate}
                                     >
 

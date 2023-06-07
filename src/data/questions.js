@@ -3,7 +3,7 @@ export const questions = [
 
     // la propiedad 'category' podría ser el nombre de la columna en la base de datos
     // en el caso de las preguntas múltiples, se siguen tratando como individuales de cara a los endpoints de las bbdd
-    // para calcular los píxeles se tomó como referencia el total de píxeles máximo que puede alcanzar la ola (500) y el total de litros máximo (11616,85 –la media de m2 fue de 250 en la pregunta 14–), y en función de litro/día se realizó una regla de tres
+    // para calcular los píxeles se tomó como referencia el total de píxeles máximo que puede alcanzar la ola (500) y el total de litros máximo (11616,85 –la media de m2 fue de 250 en la pregunta 14–), y en función de litro/día se calculó con una regla de tres
 
     // PREGUNTA 1
     {
@@ -21,7 +21,7 @@ export const questions = [
         img: "/assets/quiz/01/images/01.png"
     },
 
-    // PREGUNTA 2 //! pendiente corregir
+    // PREGUNTA 2
     {
         question_id: 2,
         question_group: undefined,
@@ -95,9 +95,9 @@ export const questions = [
         category: "lavadora",
         question: "¿Cuántas veces a la semana usas la lavadora?",
         description: [
-            { question_id: 6, text: "Lavadora", icon: "/assets/quiz/06/nav/01.png", icon_bg_color: "quiz-current-page" },
-            { question_id: 7, text: "Lavavajillas", icon: "/assets/quiz/06/nav/02.png", icon_bg_color: "quiz-next-page" },
-            { question_id: 8, text: "Modo ECO", icon: "/assets/quiz/06/nav/03.png", icon_bg_color: "quiz-next-page" }
+            { question_id: 6, text: "Lavadora", icon: "/assets/quiz/06/nav/01.png" },
+            { question_id: 7, text: "Lavavajillas", icon: "/assets/quiz/06/nav/02.png" },
+            { question_id: 8, text: "Modo ECO", icon: "/assets/quiz/06/nav/03.png" }
         ],
         answers: [
             { answer_id: 15, answer: "Menos de 3 veces", liters: 21.36, euros: 0.04079, pixels: 0.92, icon: "/assets/quiz/06/icons/06.png" },
@@ -114,9 +114,9 @@ export const questions = [
         category: "lavavajillas",
         question: "¿Y tu lavavajillas? ¿Cuántas veces se pone en marcha?",
         description: [
-            { question_id: 6, text: "Lavadora", icon: "/assets/quiz/07/nav/01.png", icon_bg_color: "quiz-prev-page" },
-            { question_id: 7, text: "Lavavajillas", icon: "/assets/quiz/07/nav/02.png", icon_bg_color: "quiz-current-page" },
-            { question_id: 8, text: "Modo ECO", icon: "/assets/quiz/07/nav/03.png", icon_bg_color: "quiz-next-page" }
+            { question_id: 6, text: "Lavadora", icon: "/assets/quiz/07/nav/01.png" },
+            { question_id: 7, text: "Lavavajillas", icon: "/assets/quiz/07/nav/02.png" },
+            { question_id: 8, text: "Modo ECO", icon: "/assets/quiz/07/nav/03.png" }
         ],
         answers: [
             { answer_id: 18, answer: "1 vez al día", liters: 64.82, euros: 0.1230, pixels: 2.79, icon: "/assets/quiz/07/icons/01.png" },
@@ -133,9 +133,9 @@ export const questions = [
         category: "modo_eco",
         question: "¿Usas la función ECO en tus electrodomésticos?",
         description: [
-            { question_id: 6, text: "Lavadora", icon: "/assets/quiz/08/nav/01.png", icon_bg_color: "quiz-prev-page" },
-            { question_id: 7, text: "Lavavajillas", icon: "/assets/quiz/08/nav/02.png", icon_bg_color: "quiz-prev-page" },
-            { question_id: 8, text: "Modo ECO", icon: "/assets/quiz/08/nav/03.png", icon_bg_color: "quiz-current-page" }
+            { question_id: 6, text: "Lavadora", icon: "/assets/quiz/08/nav/01.png" },
+            { question_id: 7, text: "Lavavajillas", icon: "/assets/quiz/08/nav/02.png" },
+            { question_id: 8, text: "Modo ECO", icon: "/assets/quiz/08/nav/03.png" }
         ],
         answers: [
             { answer_id: 21, answer: "Siempre", liters: -31.02, euros: -0.05924, pixels: -1.34, icon: "/assets/quiz/08/icons/08.png" },
@@ -152,8 +152,8 @@ export const questions = [
         category: "recicla_agua",
         question: "¿Tienes el hábito de reciclar agua para otras tareas?",
         description: [
-             { question_id: 9, text: "Reciclar o reusar agua", icon: "/assets/quiz/09/nav/01.png", icon_bg_color: "quiz-current-page" },
-             { question_id: 10, text: "Reciclar papel, vidrio o plástico", icon: "/assets/quiz/09/nav/02.png", icon_bg_color: "quiz-next-page" }
+             { question_id: 9, text: "Reciclar o reusar agua", icon: "/assets/quiz/09/nav/01.png" },
+             { question_id: 10, text: "Reciclar papel, vidrio o plástico", icon: "/assets/quiz/09/nav/02.png" }
         ],
         answers: [
             { answer_id: 24, answer: "Sí", liters: -2, euros: -0.00382, pixels: -0.09, icon: "/assets/quiz/09/icons/09.png" },
@@ -170,8 +170,8 @@ export const questions = [
         category: "recicla_papel",
         question: "¿Y qué hay del vidrio, cartón y plástico?",
         description: [
-            { question_id: 9, text: "Reciclar o reusar agua", icon: "/assets/quiz/10/nav/01.png", icon_bg_color: "quiz-prev-page" },
-            { question_id: 10, text: "Reciclar papel, vidrio o plástico", icon: "/assets/quiz/10/nav/02.png", icon_bg_color: "quiz-current-page" }
+            { question_id: 9, text: "Reciclar o reusar agua", icon: "/assets/quiz/10/nav/01.png" },
+            { question_id: 10, text: "Reciclar papel, vidrio o plástico", icon: "/assets/quiz/10/nav/02.png" }
        ],
        answers: [
             { answer_id: 27, answer: "A veces", liters: -2, euros: -0.00382, pixels: -0.09, icon: "/assets/quiz/10/icons/10.png" },
