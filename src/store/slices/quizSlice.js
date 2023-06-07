@@ -77,7 +77,7 @@ export const quizSlice = createSlice({
 
         setAnswer2: (state, { payload }) => {
             state.answers.quiz2 = payload.answer;
-            payload.operation == 'sumar' ? state.person.push('*') : state.person.pop();
+            payload.operation == 'sumar' ? state.person.push('*') : state.person.pop(); // 'person.length' será el total de iconos a renderizar en el map de la QQ2.
         },
 
         setAnswer3: (state, action) => {

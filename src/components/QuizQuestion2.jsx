@@ -17,14 +17,14 @@ export const QuizQuestion2 = ({ nextPage }) => {
         switch (target.id) {
 
             case 'sumar':
-                answers.quiz2 < 15 && dispatch(setAnswer2({
+                answers.quiz2 < 15 && dispatch(setAnswer2({ // Límite máximo de respuesta: 15 personas
                     answer: answers.quiz2 + 1,
                     operation: target.id
                 }));
                 break;
 
             case 'restar':
-                answers.quiz2 > 1 && dispatch(setAnswer2({
+                answers.quiz2 > 1 && dispatch(setAnswer2({ // Límite mínimo de respuesta: 1 persona
                     answer: answers.quiz2 - 1,
                     operation: target.id
                 }));
