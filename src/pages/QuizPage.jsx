@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Footer, FooterQuiz, HeaderQuiz, NavBarQuiz } from '../layouts';
-import { IntroQuiz, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from "../components";
+import { Footer, FooterQuiz, Header, NavBarQuiz } from '../layouts';
+import { QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from "../components";
 import '../styles/pages/QuizPage.css';
 
 export const QuizPage = () => {
 
-    const [page, setPage] = useState(0); // empieza en 0 para que el primer componente que cargue sea 'IntroQuiz'
+    const [page, setPage] = useState(1); // empieza en 0 para que el primer componente que cargue sea 'IntroQuiz'
 
     const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
   
@@ -14,16 +14,14 @@ export const QuizPage = () => {
   
       <>
   
-        <HeaderQuiz />
+        <Header />
   
         { // solo se renderizará en las preguntas del cuestionario
-          page > 0 && page < 16 && <NavBarQuiz page={page} setPage={setPage} />
+          page < 16 && <NavBarQuiz page={page} setPage={setPage} />
         }
   
         <main className={page == 16 ? 'main-results' : 'main-quiz'}>
-  
-          {page == 0 && <IntroQuiz nextPage={nextPage} />}
-  
+    
           {page == 1 && <QuizQuestion1 nextPage={nextPage} />}
   
           {page == 2 && <QuizQuestion2 nextPage={nextPage} />}

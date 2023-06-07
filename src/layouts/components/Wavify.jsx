@@ -6,6 +6,7 @@ import { changeWaveSize, sumValues } from '../../helpers';
 export const Wavify = () => {
 
     const { pixels } = useSelector(state => state.quiz);
+    
 
     useEffect(() => {
   

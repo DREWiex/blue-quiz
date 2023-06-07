@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import '../styles/layouts/HeaderQuiz.css';
+import '../styles/layouts/Header.css';
 
-export const HeaderQuiz = () => {
+export const Header = () => {
 
 
     return (

@@ -1,6 +1,6 @@
 import { useReserve } from '../hooks';
 import { Challenges, Footprint, Product } from '../components';
-import { Footer, HeaderQuiz } from '../layouts';
+import { Footer, Header } from '../layouts';
 import '../styles/components/ShowResults.css';
 
 export const ShowResults = () => {
@@ -12,7 +12,7 @@ export const ShowResults = () => {
 
     <>
 
-      <HeaderQuiz />
+      <Header />
 
       <Footprint />
 
