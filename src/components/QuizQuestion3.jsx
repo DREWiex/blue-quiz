@@ -54,12 +54,17 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
         <form onSubmit={handleSubmit}>
 
-          <select onChange={handleChange}>
+          <select id='provinces' onChange={handleChange}>
 
             {
               provinces.map((item) => (
 
-                <option key={item}> {item} </option>
+                <option
+                  key={item}
+                  value={item != 'SELECCIONA' ? item : null}
+                >
+                  {item}
+                </option>
 
               ))
             }

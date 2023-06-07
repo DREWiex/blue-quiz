@@ -4,8 +4,8 @@ import { getFeedBack, sendMyData } from '../store/thunks/quizThunk';
 import { useForm, useReserve } from '../hooks';
 import { productPromotion } from '../store/thunks/productThunk';
 import { Challenges } from '../components/Challenges';
-import '../styles/components/ShowResults.css';
 import { sumValues } from '../helpers/sumValues';
+import '../styles/components/ShowResults.css';
 
 
 export const ShowResults = () => {

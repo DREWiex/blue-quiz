@@ -54,7 +54,7 @@ export const QuizPage = () => {
   
           {page == 15 && <QuizQuestion15 nextPage={nextPage} />}
   
-          {/* {page == 16 && <ShowResults />} */}
+          {page == 16 && <ShowResults />}
   
         </main>
   
