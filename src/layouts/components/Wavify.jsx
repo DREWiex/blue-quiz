@@ -1,11 +1,24 @@
 import Wave from 'react-wavify';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { changeWaveSize, sumValues } from '../../helpers';
 
 export const Wavify = () => {
+
+    const { pixels } = useSelector(state => state.quiz);
+
+    useEffect(() => {
+  
+      const pixelsAcc = sumValues(pixels); // Suma los valores acumulados del estado 'pixels'.
+  
+      changeWaveSize(pixelsAcc); // Aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario.
+  
+    }, [pixels]);
 
 
     return (
 
-        <div>
+        <section>
 
             <Wave className="first-wave"
                 fill='#5BBFDE'
@@ -33,7 +46,7 @@ export const Wavify = () => {
                 {/* relleno de la parte baja de las olas */}
             </div>
 
-        </div>
+        </section>
 
     );
 

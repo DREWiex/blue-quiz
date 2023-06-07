@@ -1,6 +1,6 @@
 export * from './Challenges';
+export * from './Footprint';
 export * from './IntroQuiz';
-export * from './LiterCounter';
 export * from './Product';
 export * from './QuizQuestion1';
 export * from './QuizQuestion2';
@@ -18,4 +18,3 @@ export * from './QuizQuestion13';
 export * from './QuizQuestion14';
 export * from './QuizQuestion15';
 export * from './ShowResults';
-export * from './Wavify';
