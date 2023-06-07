@@ -1,4 +1,3 @@
-export * from './backFetch';
 export * from './changeWaveSize';
 export * from './findQuestion';
 export * from './isQuestionAnswered';

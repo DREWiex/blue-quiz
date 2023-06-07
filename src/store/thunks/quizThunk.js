@@ -1,4 +1,4 @@
-import { consulta } from "../../helpers/backFetch"
+import { consulta } from "../../api/backFetch"
 import { setDataPredictions, setDataRequestState, setRequestState } from "../slices/quizSlice"
 
 
