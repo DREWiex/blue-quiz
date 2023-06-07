@@ -61,12 +61,8 @@ export const quizSlice = createSlice({
             quiz13: 0,
             quiz14: 0,
         },
-
+        
         person: ['*'],
-
-        backRequestState:'',
-        dataRequestState:'',
-        dataRequest:''
     },
 
 
@@ -191,19 +187,6 @@ export const quizSlice = createSlice({
         setAnswer15: (state, { payload }) => {
             state.answers.quiz15 = payload.answer;
         },
-
-        setRequestState: (state, action) => {
-            state.backRequestState = action.payload
-        },
-        setDataPredictions: (state, action) => {
-            state.dataRequest = action.payload
-            console.log(state.dataRequest)
-        },
-        setDataRequestState: (state, action) => {
-            state.dataRequestState = action.payload
-            console.log(state.dataRequestState)
-        }
-
     }
 
 });
@@ -224,7 +207,4 @@ export const {
     setAnswer13,
     setAnswer14,
     setAnswer15,
-    setRequestState,
-    setDataPredictions,
-    setDataRequestState
 } = quizSlice.actions;
