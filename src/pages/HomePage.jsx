@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FooterQuiz, Header } from '../layouts';
-import '../styles/pages/HomePage.css';
+import styles from '../styles/pages/HomePage.module.css';
 
 export const HomePage = () => {
 
@@ -11,9 +11,9 @@ export const HomePage = () => {
 
             <Header />
 
-            <section className="quiz-intro">
+            <main className={styles.intro}>
 
-                <div className="gota">
+                <div className={styles.gota}>
 
                     <img
                         src={`${import.meta.env.VITE_URL_BASE}/assets/quiz/gota.png`}
@@ -23,7 +23,7 @@ export const HomePage = () => {
                     
                 </div>
 
-                <div>
+                <div className={styles.text}>
 
                     <h1> Haz que cada gota cuente. </h1>
 
@@ -33,7 +33,7 @@ export const HomePage = () => {
 
                 <Link to='/quiz'> Comenzar </Link>
 
-            </section>
+            </main>
 
             <FooterQuiz />
 
