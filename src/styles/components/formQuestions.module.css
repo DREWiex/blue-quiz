@@ -54,12 +54,12 @@
         }
 
         .number {
+            padding-left: 20px;
             border: 1px solid var(--gray-quiz-input);
             background-color: var(--white-quiz-placeholder-bg);
         }
 
         .number::placeholder {
-            padding-left: 10px;
             color: var(--gray-quiz-input);
         }
 
