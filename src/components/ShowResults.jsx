@@ -1,6 +1,5 @@
 import { useReserve } from '../hooks';
 import { Challenges, Footprint, Product } from '../components';
-import { Footer, Header } from '../layouts';
 import '../styles/components/ShowResults.css';
 
 export const ShowResults = () => {
@@ -11,8 +10,6 @@ export const ShowResults = () => {
   return (
 
     <>
-
-      <Header />
 
       <Footprint />
 
@@ -43,8 +40,6 @@ export const ShowResults = () => {
       <Challenges addChallenge={addChallenge} cluster='spender' />
 
       <Product />
-
-      <Footer />
 
     </>
 
