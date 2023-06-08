@@ -18,7 +18,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
         switch (target.id) {
 
             case 'sumar':
-                answers.quiz2 < 15 && dispatch(setAnswer2({ // Límite máximo de respuesta: 15 personas
+                answers.quiz2 < 12 && dispatch(setAnswer2({ // Límite máximo de respuesta: 12 personas
                     answer: answers.quiz2 + 1,
                     operation: target.id
                 }));
@@ -39,7 +39,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
         <>
 
-            <div className='quiz-container'>
+            <div className={styles.container}>
 
                 <header>
 
@@ -47,7 +47,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                     <p> {description} </p>
 
-                    <div className='hidden'>
+                    <div className={styles.hidden}>
 
                         <img
                             src={`${import.meta.env.VITE_URL_BASE}${img}`}
@@ -59,7 +59,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                 </header>
 
-                <section className='person-container'>
+                <section>
 
                     <div>
 
@@ -74,15 +74,12 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                         </button>
 
-                        <div className='person-wrapper'>
+                        <div className={styles.wrapper}>
 
                             {
                                 person.map((item, index) => (
 
-                                    <div
-                                        key={index}
-                                        className='person'
-                                    >
+                                    <div key={index}>
 
                                         <img
                                             src={`${import.meta.env.VITE_URL_BASE}${icon}`}
@@ -110,11 +107,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                     </div>
 
-                    <button
-                        onClick={nextPage}
-                    >
-                        Continuar
-                    </button>
+                    <button onClick={nextPage}> Continuar </button>
 
                 </section>
 

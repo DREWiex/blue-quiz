@@ -1,83 +1,89 @@
 /* QUIZ QUESTION 2 */
 
-.person-container {
+.container {
     display: flex;
-    flex-direction: column !important;
-    align-self: center !important;
-    justify-content: center !important;
-    width: 90% !important;
-    min-width: 90% !important;
-    max-width: 200px !important;
-}
-
-.person-container > div {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 100% !important;
-    min-height: 80px !important;
-    max-height: fit-content !important; /* El tamaño del container se ajusta en función de la cantidad de iconos que haya */
-    border-radius: 20px;
-    background-color: var(--blue-buttons) !important;
-}
-
-.person-container div > * {
-    width: 100% !important;
-    max-width: 100%;
-    background: none !important;
-}
-
-.person-container div > button {
-    display: flex;
-    align-items: center;
-    justify-content: center !important;
-    width: 50px !important;
-    min-width: 50px !important;
-    max-width: 50px !important;
-    height: fit-content !important;
-    min-height: fit-content !important;
-    max-height: 100% !important;
-    padding: 0 !important;
-    margin: 0 10px !important;
-}
-
-.person-container div button > img {
-    width: 100% !important;
-    margin: 0 20px;
-}
-
-.person-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: fit-content !important;
-    min-height: fit-content !important;
-    max-height: fit-content !important;
-}
-
-.person {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100% !important;
-    min-width: 30px !important;
-    max-width: 50px !important;
+    width: 90%;
     margin: 0 auto;
-}
 
-.person > img {
-    width: 100%;
-    margin: 0 !important;
-}
+    & header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
 
-.person-container > button {
-    height: 60px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 10px;
-    border-radius: 20px;
-    color: var(--white);
-    background-color: var(--blue-buttons) !important;
+        & > * {
+            margin-bottom: 10px;
+        }
+
+        & h2 {
+            font-size: 1.3rem;
+        }
+
+        & p {
+            font-size: 0.8rem;
+            color: var(--gray-quiz-description);
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+
+    & section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & > div {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 310px;
+            min-height: 70px;
+            padding: 10px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--blue-quiz-buttons);
+
+            & button {
+                display: flex;
+                width: 60px;
+                height: fit-content;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+
+                & div {
+                    display: flex;
+                    width: 60px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        & button {
+            width: 100%;
+            max-width: 310px;
+            height: 70px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 5px 0;
+            margin: 4px auto;
+            border-radius: 10px;
+            color: var(--white);
+            background-color: var(--blue-quiz-buttons);
+        }
+    }
 }
 
 
@@ -90,22 +96,50 @@
   
 @media screen and (min-width:1200px) {
 
-    /* QUIZ QUESTION 2 */
+    .container {
+        flex-direction: row;
+        width: 100%;
+        max-width: 800px;
+        height: 420px;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 30px;
+        box-shadow: 0px 7px 15px var(--blue-quiz-box-shadow);
+        background-color: var(--white-quiz-container-bg);
 
-    .person-container {
-        width: 40% !important;
-        min-width: 40% !important;
-        max-width: 100% !important;
-    }
+        & > * {
+            align-self: start;
+            height: 100%;
+            padding: 10px;
+        }
 
-    .person-container div > button {
-        width: 50px !important;
-        min-width: 50px !important;
-        max-width: 50px !important;
-    }
+        & header {
+            align-items: start;
+            text-align: start;
 
-    .person {
-        min-width: 35px !important;
+            & h2 {
+                font-size: 1.8rem
+            }
+
+            & p {
+                font-size: 0.9rem;
+            }
+
+            .hidden {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                & img {
+                    object-fit: contain;
+                }
+            }
+        }
+
+        & section {
+            justify-content: center;
+        }
     }
   
 } /* 1200px end */
