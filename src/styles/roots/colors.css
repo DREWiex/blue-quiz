@@ -8,6 +8,8 @@
     /* QUIZ */
     --gray-quiz-description: #646464; /* quiz description */
     --blue-quiz-buttons: #2F8DD8; /* quiz buttons */
+    --white-quiz-container-bg: #FAFAFAE6; /* quiz container background w/opacity */
+    --blue-quiz-box-shadow: #0083AC; /* quiz container shadow */
 
 
     --quiz-prev-page: #014397;
