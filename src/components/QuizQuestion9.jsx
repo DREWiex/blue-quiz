@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { findQuestion } from '../helpers';
 import { questions } from '../data';
 import { setAnswer9 } from '../store/slices/quizSlice';
+import styles from '../styles/components/multipleQuestions.module.css';
 
 export const QuizQuestion9 = ({ nextPage }) => {
 
@@ -38,13 +39,13 @@ export const QuizQuestion9 = ({ nextPage }) => {
 
         <>
 
-            <div className='quiz-container'>
+            <div className={styles.container}>
 
                 <header>
 
                     <h2> {question} </h2>
 
-                    <div className='hidden'>
+                    <div className={styles.hidden}>
 
                         <img
                             src={`${import.meta.env.VITE_URL_BASE}${img}`}
@@ -63,7 +64,10 @@ export const QuizQuestion9 = ({ nextPage }) => {
                         {
                             description.map(item => (
 
-                                <div key={item.text}>
+                                <article
+                                    key={item.text}
+                                    className={styles.navButtons}
+                                >
 
                                     <button
                                         onClick={handlePaginate}
@@ -80,7 +84,7 @@ export const QuizQuestion9 = ({ nextPage }) => {
 
                                     <p> {item.text} </p>
 
-                                </div>
+                                </article>
 
                             ))
                         }
@@ -90,7 +94,10 @@ export const QuizQuestion9 = ({ nextPage }) => {
                     {
                         answers.map(item => (
 
-                            <div key={item.answer_id}>
+                            <article
+                                key={item.answer_id}
+                                className={styles.answersButtons}
+                            >
 
                                 <button
                                     id={item.answer_id}
@@ -111,7 +118,7 @@ export const QuizQuestion9 = ({ nextPage }) => {
 
                                 </button>
 
-                            </div>
+                            </article>
 
                         ))
                     }
