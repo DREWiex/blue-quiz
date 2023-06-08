@@ -1,6 +1,5 @@
 export * from './Challenges';
 export * from './Footprint';
-export * from './IntroQuiz';
 export * from './Product';
 export * from './QuizQuestion1';
 export * from './QuizQuestion2';

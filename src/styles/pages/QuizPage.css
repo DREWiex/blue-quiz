@@ -285,8 +285,9 @@
 
     .quiz-container header div {
         display: flex;
-        width: fit-content; /* ajusta el tamaño de la imagen al contenedor */
+        width: 200px; /* ajusta el tamaño de la imagen al contenedor */
         margin: auto; /* centra la imagen con respecto a su contenedor */
+        background-color: red;
     }
 
     .quiz-container section {

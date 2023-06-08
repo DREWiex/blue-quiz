@@ -6,14 +6,14 @@ import { changeWaveSize, sumValues } from '../../helpers';
 export const Wavify = () => {
 
     const { pixels } = useSelector(state => state.quiz);
-    
+
 
     useEffect(() => {
-  
-      const pixelsAcc = sumValues(pixels); // Suma los valores acumulados del estado 'pixels'.
-  
-      changeWaveSize(pixelsAcc); // Aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario.
-  
+
+        const pixelsAcc = sumValues(pixels); // Suma los valores acumulados del estado 'pixels'.
+
+        changeWaveSize(pixelsAcc); // Aumenta o disminuye el tamaño de la ola en función de la respuesta del usuario.
+
     }, [pixels]);
 
 
