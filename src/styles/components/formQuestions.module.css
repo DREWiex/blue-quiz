@@ -1,4 +1,4 @@
-/* QUIZ QUESTIONS 1, 4, 5, 11, 12, 13, 15 */
+/* QUIZ QUESTIONS 3, 14 */
 
 .container {
     display: flex;
@@ -32,36 +32,46 @@
         }
     }
 
-    & section {
+    & form {
         display: flex;
         flex-direction: column;
         width: 100%;
 
-        & div {
-            display: flex;
-
-            & button {
-                display: flex;
-                align-items: center;
-                width: 100%;
-                max-width: 310px;
-                height: 70px;
-                font-size: 1rem;
-                font-weight: 600;
-                text-transform: uppercase;
-                padding: 5px 0;
-                margin: 4px auto;
-                border-radius: 10px;
-                color: var(--white);
-                background-color: var(--blue-quiz-buttons);
-
-                & img {
-                    width: 60px;
-                    margin: 0 20px;
-                }
-            }
+        & > * {
+            width: 100%;
+            max-width: 310px;
+            height: 70px;
+            margin: 5px auto;
+            border-radius: 10px;
         }
-    } 
+
+        & select {
+            font-weight: 500;
+            border: none;
+            padding: 20px;
+            color: var(--white);
+            background-color: var(--blue-quiz-buttons);
+        }
+
+        .number {
+            border: 1px solid var(--gray-quiz-input);
+            background-color: var(--white-quiz-placeholder-bg);
+        }
+
+        .number::placeholder {
+            padding-left: 10px;
+            color: var(--gray-quiz-input);
+        }
+
+        .submit {
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: none;
+            color: var(--white);
+            background-color: var(--blue-quiz-buttons);
+        }
+    }    
 }
 
 
@@ -115,7 +125,7 @@
             }
         }
 
-        & section {
+        & form {
             justify-content: center;
         }
     }

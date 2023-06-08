@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { questions } from '../data';
 import { findQuestion } from '../helpers';
 import { setAnswer3 } from '../store/slices/quizSlice';
+import styles from '../styles/components/formQuestions.module.css';
 
 export const QuizQuestion3 = ({ nextPage }) => {
 
@@ -32,7 +33,7 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
     <>
 
-      <div className='quiz-container'>
+      <div className={styles.container}>
 
         <header>
 
@@ -40,7 +41,7 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
           <p> {description} </p>
 
-          <div className='hidden'>
+          <div className={styles.hidden}>
 
             <img
               src={`${import.meta.env.VITE_URL_BASE}${img}`}
