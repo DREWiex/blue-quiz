@@ -1,4 +1,4 @@
-/* QUIZ QUESTIONS 1, 4, 5, 11, 12, 13, 15 */
+/* QUIZ QUESTIONS 6, 7, 8, 9, 10 */
 
 .container {
     display: flex;
@@ -37,8 +37,42 @@
         flex-direction: column;
         width: 100%;
 
-        & div {
+        & nav {
             display: flex;
+            /* align-items: start; */
+            /* justify-content: space-evenly; */
+            width: 100%;
+            max-width: 310px;
+            /* height: 100%; */
+            margin: 0 auto;
+
+            .navButtons {
+                display: flex;
+                flex-direction: column;
+                /* align-items: center; */
+                /* justify-content: end; */
+                width: 100%;
+
+                & > * {
+                    margin-bottom: 5px;
+                }
+
+                & button {
+                    width: 70px;
+                    margin: 0 auto;
+                }
+
+                & p {
+                    text-align: center;
+                    font-size: 0.8rem;
+                    color: var(--gray-quiz-description);
+                }
+            }
+        }
+
+        .answersButtons {
+            display: flex;
+            width: 100%;
 
             & button {
                 display: flex;

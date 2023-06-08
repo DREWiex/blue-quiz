@@ -2,6 +2,7 @@ import { questions } from '../data';
 import { useDispatch } from 'react-redux';
 import { setAnswer6 } from '../store/slices/quizSlice';
 import { findQuestion } from '../helpers';
+import styles from '../styles/components/multipleQuestions.module.css';
 
 export const QuizQuestion6 = ({ nextPage }) => {
 
@@ -13,7 +14,7 @@ export const QuizQuestion6 = ({ nextPage }) => {
   const handlePaginate = ({ target }) => {
 
 
-}; //!FUNC-HANDLEPAGINATE
+  }; //!FUNC-HANDLEPAGINATE
 
 
   const handleTimes = ({ target }) => {
@@ -37,13 +38,13 @@ export const QuizQuestion6 = ({ nextPage }) => {
 
     <>
 
-      <div className='quiz-container'>
+      <div className={styles.container}>
 
         <header>
 
           <h2> {question} </h2>
 
-          <div className='hidden'>
+          <div className={styles.hidden}>
 
             <img
               src={`${import.meta.env.VITE_URL_BASE}${img}`}
@@ -62,7 +63,10 @@ export const QuizQuestion6 = ({ nextPage }) => {
             {
               description.map(item => (
 
-                <div key={item.text}>
+                <article
+                  key={item.text}
+                  className={styles.navButtons}
+                >
 
                   <button
                     onClick={handlePaginate}
@@ -79,7 +83,7 @@ export const QuizQuestion6 = ({ nextPage }) => {
 
                   <p> {item.text} </p>
 
-                </div>
+                </article>
 
               ))
             }
@@ -89,7 +93,10 @@ export const QuizQuestion6 = ({ nextPage }) => {
           {
             answers.map(item => (
 
-              <div key={item.answer_id}>
+              <article
+                key={item.answer_id}
+                className={styles.answersButtons}
+              >
 
                 <button
                   id={item.answer_id}
@@ -110,7 +117,7 @@ export const QuizQuestion6 = ({ nextPage }) => {
 
                 </button>
 
-              </div>
+              </article>
 
             ))
           }
