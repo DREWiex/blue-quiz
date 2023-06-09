@@ -1,0 +1,103 @@
+
+.results-product {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 992px;
+    min-height: calc(100vh - var(--height-standard));
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.results-product > * {
+    margin-bottom: 20px;
+}
+
+.results-product h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #014397;
+}
+
+.results-product-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.results-product-img img {
+    width: 100%;
+}
+
+.results-product-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.results-product-item > * {
+    margin: 10px 0;
+}
+
+.results-product-item article {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+.results-product-item article div {
+    width: fit-content;
+}
+
+.results-product-item article div img {
+    width: 40px;
+}
+
+.results-product-item article p {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 20px;
+} 
+
+.results-product-item > button {
+    width: 100%;
+    max-width: 400px;
+    height: 55px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 40px;
+    color: var(--white);
+    background-color: #F97D35;
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .results-product {
+        min-height: 100%;
+        padding: 20px 0;
+        margin: 0 auto;
+    }
+
+    .results-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .results-product-item > button {
+        max-width: 300px;
+    }
+  
+} /* 1200px end */

@@ -2,26 +2,35 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer2 } from '../store/slices/quizSlice';
 import { findQuestion } from '../helpers';
 import { questions } from '../data';
+import styles from '../styles/components/quiz/QuizQuestion2.module.css';
 
 export const QuizQuestion2 = ({ nextPage }) => {
 
-    const { count } = useSelector((state) => state.quiz);
+    const { answers, person } = useSelector((state) => state.quiz);
 
     const dispatch = useDispatch();
 
-    const { question, description, icons, img } = findQuestion(questions, 2);
+    const { question, description, icon, img } = findQuestion(questions, 2);
 
 
-    const handleCount = (ev) => {
+    const handleClick = ({ target }) => {
 
-        dispatch(setAnswer2({ sign: ev.target.id }));
+        switch (target.id) {
 
-    };
+            case 'sumar':
+                answers.quiz2 < 12 && dispatch(setAnswer2({ // Límite máximo de respuesta: 12 personas
+                    answer: answers.quiz2 + 1,
+                    operation: target.id
+                }));
+                break;
 
-
-    const handlePage = ({ target }) => {
-
-        nextPage();
+            case 'restar':
+                answers.quiz2 > 1 && dispatch(setAnswer2({ // Límite mínimo de respuesta: 1 persona
+                    answer: answers.quiz2 - 1,
+                    operation: target.id
+                }));
+                break;
+        };
 
     };
 
@@ -30,7 +39,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
         <>
 
-            <div className='quiz-container'>
+            <div className={styles.container}>
 
                 <header>
 
@@ -38,7 +47,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                     <p> {description} </p>
 
-                    <div className='hidden'>
+                    <div className={styles.hidden}>
 
                         <img
                             src={`${import.meta.env.VITE_URL_BASE}${img}`}
@@ -50,33 +59,30 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                 </header>
 
-                <section className='person-container'>
+                <section>
 
                     <div>
 
-                        <button onClick={handleCount}>
+                        <button onClick={handleClick}>
 
                             <img
                                 id="restar"
-                                src={`${import.meta.env.VITE_URL_BASE}/assets/icons/menos.svg`}
+                                src={`${import.meta.env.VITE_URL_BASE}/assets/quiz/02/subtract.png`}
                                 alt="Signo menos"
                                 title="Signo menos"
                             />
 
                         </button>
 
-                        <div className='person-wrapper'>
+                        <div className={styles.wrapper}>
 
                             {
-                                count.map((item, index) => (
+                                person.map((item, index) => (
 
-                                    <div
-                                        key={index}
-                                        className='person'
-                                    >
+                                    <div key={index}>
 
                                         <img
-                                            src={`${import.meta.env.VITE_URL_BASE}/assets/icons/persona.svg`}
+                                            src={`${import.meta.env.VITE_URL_BASE}${icon}`}
                                             alt="Icono de persona"
                                             title='Icono de persona'
                                         />
@@ -88,11 +94,11 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                         </div>
 
-                        <button onClick={handleCount}>
+                        <button onClick={handleClick}>
 
                             <img
                                 id="sumar"
-                                src={`${import.meta.env.VITE_URL_BASE}/assets/icons/mas.svg`}
+                                src={`${import.meta.env.VITE_URL_BASE}/assets/quiz/02/add.png`}
                                 alt="Signo más"
                                 title="Signo más"
                             />
@@ -101,11 +107,7 @@ export const QuizQuestion2 = ({ nextPage }) => {
 
                     </div>
 
-                    <button
-                        onClick={handlePage}
-                    >
-                        Continuar
-                    </button>
+                    <button onClick={nextPage}> Continuar </button>
 
                 </section>
 

@@ -1,29 +1,27 @@
 import { useState } from "react";
-import { Footer, FooterQuiz, HeaderQuiz, NavBarQuiz } from '../layouts';
-import { IntroQuiz, QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from "../components";
-import '../styles/pages/QuizPage.css';
+import { Footer, FooterQuiz, Header, NavBarQuiz } from '../layouts';
+import { QuizQuestion1, QuizQuestion10, QuizQuestion11, QuizQuestion12, QuizQuestion13, QuizQuestion14, QuizQuestion15, QuizQuestion2, QuizQuestion3, QuizQuestion4, QuizQuestion5, QuizQuestion6, QuizQuestion7, QuizQuestion8, QuizQuestion9, ShowResults } from "../components";
+import styles from '../styles/pages/QuizPage.module.css';
 
 export const QuizPage = () => {
 
-    const [page, setPage] = useState(0); // empieza en 0 para que el primer componente que cargue sea 'IntroQuiz'
+    const [page, setPage] = useState(1); // Por defecto empieza en la página 1, así renderiza el componente 'QuizQuestion1'.
 
-    const nextPage = () => setPage(page + 1); // avanzar a la siguiente pregunta
+    const nextPage = () => setPage(page + 1); // Avanzar a la siguiente pregunta.
   
   
     return (
   
       <>
   
-        <HeaderQuiz />
+        <Header />
   
-        { // solo se renderizará en las preguntas del cuestionario
-          page > 0 && page < 16 && <NavBarQuiz page={page} setPage={setPage} />
+        { // Solo se renderizará en las preguntas del quiz.
+          page < 16 && <NavBarQuiz page={page} setPage={setPage} />
         }
   
-        <main className={page == 16 ? 'main-results' : 'main-quiz'}>
-  
-          {page == 0 && <IntroQuiz nextPage={nextPage} />}
-  
+        <main className={page == 16 ? styles.results : styles.quiz}>
+    
           {page == 1 && <QuizQuestion1 nextPage={nextPage} />}
   
           {page == 2 && <QuizQuestion2 nextPage={nextPage} />}
@@ -54,7 +52,7 @@ export const QuizPage = () => {
   
           {page == 15 && <QuizQuestion15 nextPage={nextPage} />}
   
-          {/* {page == 16 && <ShowResults />} */}
+          {page == 16 && <ShowResults />}
   
         </main>
   

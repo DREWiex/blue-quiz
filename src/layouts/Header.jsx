@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import '../styles/layouts/HeaderQuiz.css';
+import styles from '../styles/layouts/Header.module.css';
 
-export const HeaderQuiz = () => {
+export const Header = () => {
 
 
     return (
 
-        <header className='header-quiz'>
+        <header className={styles.quizHeader}>
 
-            <div>
+            <div className={styles.container}>
 
                 <Link to='/'>
 

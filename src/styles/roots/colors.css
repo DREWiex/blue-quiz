@@ -1,18 +1,34 @@
 :root{
 
-    --white: #FAFAFA; /* blanco principal */
-    --header-bg: #014397;
+    --white: #FAFAFA;
 
-    --dark-gray: #646464; /* quiz descripción párrafos */
+    /* LAYOUTS - Header */
+    --header-bg: #014397; /* header background */
+
+    /* LAYOUTS - Footer */
+    --footer-bg: #014397; /* footer background */
+    --blue-footer-span: #88E6F7; /* footer span font color */
+    --blue-footer-border: #BFDBFF; /* footer border top & bottom */
+
+    /* QUIZ */
+    --blue-quiz-buttons: #2F8DD8; /* quiz buttons */
+    --blue-quiz-box-shadow: #0083AC; /* quiz container shadow */
+    --gray-quiz-description: #646464; /* quiz description */
+    --gray-quiz-input: #D9D9D9; /* quiz input number border and placeholder color */
+    --white-quiz-container-bg: #FAFAFAE6; /* quiz container background w/opacity */
+    --white-quiz-placeholder-bg: #EDF6F8; /* quiz input number placeholder background */
+
+    /* RESULTS */
+    --white-gradient: #FFF; /* linear gradiente first color */
+    --blue-gradient: #6CC2DE; /* linear gradient second color */
+
+    /** PENDIENTE CLASIFICAR **/
 
     --quiz-prev-page: #014397;
     --quiz-current-page: #028FDF;
     --quiz-next-page: #D9D9D9;
 
-    --blue-buttons: #2F8DD8; /* azul botones quiz */
     --darkblue-bg-buttons: #2E89D1;
-    --white-placeholder: #EDF6F8;
-    --light-silver: #D9D9D9;
 
     --white-transparent: #FAFAFAE6; /* bg quiz-container */
     --blue-box-shadow: #0083AC; /* shadow quiz-container */

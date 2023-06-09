@@ -1,0 +1,152 @@
+/* QUIZ QUESTIONS 6, 7, 8, 9, 10 */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+    & header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+
+        & > * {
+            margin-bottom: 10px;
+        }
+
+        & h2 {
+            font-size: 1.3rem;
+        }
+
+        & p {
+            font-size: 0.8rem;
+            color: var(--gray-quiz-description);
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+
+    & section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & nav {
+            display: flex;
+            width: 100%;
+            max-width: 310px;
+            margin: 0 auto;
+
+            .navButtons {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                & > * {
+                    margin-bottom: 5px;
+                }
+
+                & button {
+                    width: 70px;
+                    margin: 0 auto;
+                }
+
+                & p {
+                    text-align: center;
+                    font-size: 0.8rem;
+                    color: var(--gray-quiz-description);
+                }
+            }
+        }
+
+        .answersButtons {
+            display: flex;
+            width: 100%;
+
+            & button {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                max-width: 310px;
+                height: 70px;
+                font-size: 1rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 5px 0;
+                margin: 4px auto;
+                border-radius: 10px;
+                color: var(--white);
+                background-color: var(--blue-quiz-buttons);
+
+                & img {
+                    width: 60px;
+                    margin: 0 20px;
+                }
+            }
+        }
+    } 
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .container {
+        flex-direction: row;
+        width: 100%;
+        max-width: 800px;
+        height: 420px;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 30px;
+        box-shadow: 0px 7px 15px var(--blue-quiz-box-shadow);
+        background-color: var(--white-quiz-container-bg);
+
+        & > * {
+            align-self: start;
+            height: 100%;
+            padding: 10px;
+        }
+
+        & header {
+            align-items: start;
+            text-align: start;
+
+            & h2 {
+                font-size: 1.8rem
+            }
+
+            & p {
+                font-size: 0.9rem;
+            }
+
+            .hidden {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                & img {
+                    object-fit: contain;
+                }
+            }
+        }
+
+        & section {
+            justify-content: center;
+        }
+    }
+    
+} /* 1200px end */

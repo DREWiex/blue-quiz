@@ -1,22 +1,29 @@
+import { Link } from 'react-router-dom';
+import { FooterQuiz, Header } from '../layouts';
+import styles from '../styles/pages/HomePage.module.css';
 
-export const IntroQuiz = ({ nextPage }) => {
+export const HomePage = () => {
 
 
     return (
 
         <>
 
-            <section className="quiz-intro">
+            <Header />
 
-                <div className="gota">
+            <main className={styles.intro}>
+
+                <div className={styles.gota}>
+
                     <img
                         src={`${import.meta.env.VITE_URL_BASE}/assets/quiz/gota.png`}
                         alt="Dibujo de una gota de agua"
                         title="Dibujo de una gota de agua"
                     />
+                    
                 </div>
 
-                <div>
+                <div className={styles.text}>
 
                     <h1> Haz que cada gota cuente. </h1>
 
@@ -24,9 +31,11 @@ export const IntroQuiz = ({ nextPage }) => {
 
                 </div>
 
-                <button onClick={nextPage}> Comenzar </button>
+                <Link to='/quiz'> Comenzar </Link>
 
-            </section>
+            </main>
+
+            <FooterQuiz />
 
         </>
 

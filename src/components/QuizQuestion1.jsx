@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { setAnswer1 } from '../store/slices/quizSlice';
 import { findQuestion } from '../helpers';
 import { questions } from '../data';
+import styles from '../styles/components/quiz/singleQuestions.module.css';
 
 export const QuizQuestion1 = ({ nextPage }) => {
 
@@ -12,7 +13,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
   const handleAgeRange = ({ target }) => {
 
-    dispatch(setAnswer1({ ageRange: target.value }));
+    dispatch(setAnswer1({ answer: target.value }));
 
     nextPage();
 
@@ -23,7 +24,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
     <>
 
-      <div className='quiz-container'>
+      <div className={styles.container}>
 
         <header>
 
@@ -31,7 +32,7 @@ export const QuizQuestion1 = ({ nextPage }) => {
 
           <p> {description} </p>
 
-          <div className='hidden'>
+          <div className={styles.hidden}>
 
             <img
               src={`${import.meta.env.VITE_URL_BASE}${img}`}

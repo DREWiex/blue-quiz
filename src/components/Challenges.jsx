@@ -7,17 +7,13 @@ export const Challenges = ({ addChallenge, cluster }) => {
 
     //! si 'cluster' (props) es igual a 'saver', devuelve el objeto que contiene la propiedad 'cluster: saver'
     //! si 'cluster' (props) es igual a 'spender', devuelve el objeto que contiene la propiedad 'cluster: spender'
-    const { title, description, challenges } = arrayChallenges.find(item => item.cluster == cluster); //! cambiar por props
+    const { title, description, challenges } = arrayChallenges.find(item => item.cluster == cluster);
 
 
     return (
 
         <>
-          <img
-            src={`${import.meta.env.VITE_URL_BASE}/assets/images/percentages.png`}
-            alt="porcentajes de huella hídrica"
-            title="Porcentajes"
-          />
+
             <section className='challenges-container'>
 
             

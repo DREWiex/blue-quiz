@@ -3,6 +3,7 @@ import { findQuestion } from '../helpers';
 import { questions } from '../data';
 import { setAnswer14 } from '../store/slices/quizSlice';
 import { useForm } from '../hooks';
+import styles from '../styles/components/quiz/formQuestions.module.css';
 
 export const QuizQuestion14 = ({ nextPage }) => {
 
@@ -45,7 +46,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
         <>
 
-            <div className='quiz-container'>
+            <div className={styles.container}>
 
                 <header>
 
@@ -53,7 +54,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
 
                     <p> {description[0]} </p>
 
-                    <div>
+                    <div className={styles.hidden}>
 
                         <img
                             src={`${import.meta.env.VITE_URL_BASE}${img}`}
@@ -68,6 +69,7 @@ export const QuizQuestion14 = ({ nextPage }) => {
                 <form onSubmit={handleSubmit}>
 
                     <input
+                        className={styles.number}
                         type="number"
                         name={category}
                         placeholder={description[1]}
@@ -77,10 +79,10 @@ export const QuizQuestion14 = ({ nextPage }) => {
                     />
 
                     <input
-                        className="submit"
+                        className={styles.submit}
                         type="submit"
                         value="Continuar"
-                        disabled={!form ? true : form.jardin == '' ? true : false } // no se habilita el botón continuar hasta que el usuario no introduce un valor (segundo condicional: si el usuario escribe un valor y luego lo borra dejando el input en blanco, tampoco se habilita el botón)
+                        disabled={!form ? true : form.jardin == '' ? true : false} // no se habilita el botón continuar hasta que el usuario no introduce un valor (segundo condicional: si el usuario escribe un valor y luego lo borra dejando el input en blanco, tampoco se habilita el botón)
                     />
 
                 </form>

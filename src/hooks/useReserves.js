@@ -1,27 +1,9 @@
-import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { setEcoMode, setMeatLess, setRecycle, setShowerLess, setSmartBlue, setWashMachine, setWaterReUse } from '../store/slices/challengesSlice';
 
 export const useReserve = () => {
 
-  const [polIsChecked, setPolIsChecked] = useState(false);
-  const [susIsChecked, setSusIsChecked] = useState(false);
   const dispatch = useDispatch();
-
-  const handleButton = (ev) => {
-    const reserveDiv = document.querySelector('.emailForm')
-    reserveDiv.classList.toggle('hidden')
-  }
-
-  const handlePoliticyCheckBoxChange = ({ target }) => {
-
-    setPolIsChecked(target.checked)
-  }
-
-  const handleSuscriptionCheckBoxChange = ({ target }) => {
-
-    setSusIsChecked(target.checked)
-  }
 
   const addChallenge = ({ target }) => {
 
@@ -51,12 +33,6 @@ export const useReserve = () => {
     }
   }
 
-  return {
-    handleButton,
-    handlePoliticyCheckBoxChange,
-    handleSuscriptionCheckBoxChange,
-    polIsChecked,
-    susIsChecked,
-    addChallenge
-  }
-}
+  return { addChallenge };
+
+};

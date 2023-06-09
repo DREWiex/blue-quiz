@@ -1,0 +1,133 @@
+/* QUIZ QUESTIONS 3, 14 */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+    & header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+
+        & > * {
+            margin-bottom: 10px;
+        }
+
+        & h2 {
+            font-size: 1.3rem;
+        }
+
+        & p {
+            font-size: 0.8rem;
+            color: var(--gray-quiz-description);
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & > * {
+            width: 100%;
+            max-width: 310px;
+            height: 70px;
+            margin: 5px auto;
+            border-radius: 10px;
+        }
+
+        & select {
+            font-weight: 500;
+            border: none;
+            padding: 20px;
+            color: var(--white);
+            background-color: var(--blue-quiz-buttons);
+        }
+
+        .number {
+            padding-left: 20px;
+            border: 1px solid var(--gray-quiz-input);
+            background-color: var(--white-quiz-placeholder-bg);
+        }
+
+        .number::placeholder {
+            color: var(--gray-quiz-input);
+        }
+
+        .submit {
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: none;
+            color: var(--white);
+            background-color: var(--blue-quiz-buttons);
+        }
+    }    
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .container {
+        flex-direction: row;
+        width: 100%;
+        max-width: 800px;
+        height: 420px;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 30px;
+        box-shadow: 0px 7px 15px var(--blue-quiz-box-shadow);
+        background-color: var(--white-quiz-container-bg);
+
+        & > * {
+            align-self: start;
+            height: 100%;
+            padding: 10px;
+        }
+
+        & header {
+            align-items: start;
+            text-align: start;
+
+            & h2 {
+                font-size: 1.8rem
+            }
+
+            & p {
+                font-size: 0.9rem;
+            }
+
+            .hidden {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                & img {
+                    object-fit: contain;
+                }
+            }
+        }
+
+        & form {
+            justify-content: center;
+        }
+    }
+    
+} /* 1200px end */

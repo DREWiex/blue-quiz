@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { questions } from '../data';
 import { findQuestion } from '../helpers';
 import { setAnswer3 } from '../store/slices/quizSlice';
+import styles from '../styles/components/quiz/formQuestions.module.css';
 
 export const QuizQuestion3 = ({ nextPage }) => {
 
@@ -9,7 +10,7 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
   const { question, description, answers, img } = findQuestion(questions, 3);
 
-  const provinciasEspana = answers[0].answer;
+  const { answer: provinces } = answers;
 
 
   const handleSubmit = (ev) => {
@@ -19,20 +20,20 @@ export const QuizQuestion3 = ({ nextPage }) => {
   }; //!FUNC-HANDLESUBMIT
 
 
-  const handleProvinces = ({ target }) => {
+  const handleChange = ({ target }) => {
 
-    dispatch(setAnswer3({ province: target.value }));
+    dispatch(setAnswer3({ answer: target.value }));
 
     nextPage();
 
-  }; //!FUNC-HANDLEPROVINCES
+  }; //!FUNC-HANDLECHANGE
 
 
   return (
 
     <>
 
-      <div className='quiz-container'>
+      <div className={styles.container}>
 
         <header>
 
@@ -40,7 +41,7 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
           <p> {description} </p>
 
-          <div className='hidden'>
+          <div className={styles.hidden}>
 
             <img
               src={`${import.meta.env.VITE_URL_BASE}${img}`}
@@ -54,13 +55,15 @@ export const QuizQuestion3 = ({ nextPage }) => {
 
         <form onSubmit={handleSubmit}>
 
-          <select onChange={handleProvinces}>
+          <select id='provinces' onChange={handleChange}>
 
             {
-              provinciasEspana.map((item) => (
+              provinces.map((item) => (
 
                 <option
-                  key={item}>
+                  key={item}
+                  value={item != 'SELECCIONA' ? item : null}
+                >
                   {item}
                 </option>
 
