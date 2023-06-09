@@ -27,7 +27,11 @@ export const Footer = () => {
 
                     <div>
 
-                        <img src={`${import.meta.env.VITE_URL_BASE}/assets/footer/logo.png`} alt='Logo Blue' title='Logo Blue' />
+                        <div>
+
+                            <img src={`${import.meta.env.VITE_URL_BASE}/assets/footer/logo.png`} alt='Logo Blue' title='Logo Blue' />
+
+                        </div>
 
                         <p> Blue </p>
 
