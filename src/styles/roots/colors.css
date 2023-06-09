@@ -18,6 +18,10 @@
     --white-quiz-container-bg: #FAFAFAE6; /* quiz container background w/opacity */
     --white-quiz-placeholder-bg: #EDF6F8; /* quiz input number placeholder background */
 
+    /* RESULTS */
+    --white-gradient: #FFF; /* linear gradiente first color */
+    --blue-gradient: #6CC2DE; /* linear gradient second color */
+
     /** PENDIENTE CLASIFICAR **/
 
     --quiz-prev-page: #014397;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { sumValues } from "../helpers";
+import styles from '../styles/components/Footprint.module.css';
 
 export const Footprint = () => {
 
@@ -25,33 +26,33 @@ export const Footprint = () => {
 
         <>
 
-            <section className='results-footprint'>
+            <section className={styles.footprint}>
 
                 <h1> Descubre tu huella hídrica </h1>
 
-                <div>
+                <article>
 
                     <h2> Huella doméstica </h2>
 
-                    <p> {totalLiters} </p>
+                    <p className={styles.numbers}> {totalLiters} </p>
 
                     <p> Litros al día </p>
 
                     <p> Media en España: 1.350 litros al día </p>
 
-                </div>
+                </article>
 
-                <div>
+                <article>
 
                     <h2> Gasto anual </h2>
 
-                    <p> {totalEuros} </p>
+                    <p className={styles.numbers}> {totalEuros} </p>
 
                     <p> Euros al año </p>
 
                     <p> Media en España: 4.235 euros al año </p>
 
-                </div>
+                </article>
 
             </section>
 
