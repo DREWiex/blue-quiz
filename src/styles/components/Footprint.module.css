@@ -8,7 +8,6 @@
     background: linear-gradient(var(--white-gradient), var(--blue-gradient));
 
     & h1 {
-        justify-self: start;
         text-align: center;
     }
 
@@ -28,3 +27,23 @@
         }
     }
 }
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .footprint {
+        align-items: center;
+
+        & article {
+            align-items: center;
+        }
+    }
+  
+} /* 768px end */

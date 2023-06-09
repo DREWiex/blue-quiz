@@ -5,7 +5,7 @@ import styles from '../styles/pages/QuizPage.module.css';
 
 export const QuizPage = () => {
 
-    const [page, setPage] = useState(16); // Por defecto empieza en la página 1, así renderiza el componente 'QuizQuestion1'.
+    const [page, setPage] = useState(1); // Por defecto empieza en la página 1, así renderiza el componente 'QuizQuestion1'.
 
     const nextPage = () => setPage(page + 1); // Avanzar a la siguiente pregunta.
   

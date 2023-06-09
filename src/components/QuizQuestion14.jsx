@@ -3,7 +3,7 @@ import { findQuestion } from '../helpers';
 import { questions } from '../data';
 import { setAnswer14 } from '../store/slices/quizSlice';
 import { useForm } from '../hooks';
-import styles from '../styles/components/formQuestions.module.css';
+import styles from '../styles/components/quiz/formQuestions.module.css';
 
 export const QuizQuestion14 = ({ nextPage }) => {
 

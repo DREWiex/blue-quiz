@@ -2,7 +2,7 @@ import { findQuestion } from '../helpers';
 import { questions } from '../data';
 import { useDispatch } from 'react-redux';
 import { setAnswer7 } from '../store/slices/quizSlice';
-import styles from '../styles/components/multipleQuestions.module.css';
+import styles from '../styles/components/quiz/multipleQuestions.module.css';
 
 export const QuizQuestion7 = ({ nextPage }) => {
 

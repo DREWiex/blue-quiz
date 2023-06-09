@@ -1,5 +1,5 @@
-@import '../components/LiterCounter.css';
-@import '../components/Wavify.css';
+@import './components/LiterCounter.css';
+@import './components/Wavify.css';
 
 .footer-quiz {
     display: flex;

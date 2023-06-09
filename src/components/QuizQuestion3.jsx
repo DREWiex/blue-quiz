@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { questions } from '../data';
 import { findQuestion } from '../helpers';
 import { setAnswer3 } from '../store/slices/quizSlice';
-import styles from '../styles/components/formQuestions.module.css';
+import styles from '../styles/components/quiz/formQuestions.module.css';
 
 export const QuizQuestion3 = ({ nextPage }) => {
 
