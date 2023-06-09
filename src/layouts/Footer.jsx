@@ -1,13 +1,13 @@
-import '../styles/layouts/Footer.css';
+import styles from '../styles/layouts/Footer.module.css';
 
 export const Footer = () => {
 
 
     return (
 
-        <footer className='footer-container'>
+        <footer className={styles.container}>
 
-            <section className='footer-first-section'>
+            <section className={styles.firstSection}>
 
                 <p> <span> Reto BLUE </span>, sé el cambio que quieres ver en el mundo </p>
 
@@ -21,9 +21,9 @@ export const Footer = () => {
 
             </section>
 
-            <nav>
+            <nav className={styles.secondSection}>
 
-                <div className='footer-logo'>
+                <section className={styles.logo}>
 
                     <div>
 
@@ -35,9 +35,9 @@ export const Footer = () => {
 
                     <p> La tecnología que te enseña a ahorrar agua </p>
 
-                </div>
+                </section>
 
-                <div className='footer-rrss'>
+                <section className={styles.rrss}>
 
                     <div>
 
@@ -63,11 +63,11 @@ export const Footer = () => {
 
                     </div>
 
-                </div>
+                </section>
 
             </nav>
 
-            <section className='footer-second-section'>
+            <section className={styles.thirdSection}>
 
                 <p> 2023 SmartBlue Technology Inc. Todos los derechos reservados </p>
 

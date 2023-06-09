@@ -1,4 +1,4 @@
-.footer-container {
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -6,7 +6,7 @@
     background-color: #014397;
 }
 
-.footer-container > * {
+.container > * {
     width: 90%;
     max-width: 992px;
     padding: 20px 0;
@@ -14,31 +14,35 @@
     text-align: center;
 }
 
-.footer-first-section {
+/* FIRST SECTION */
+
+.firstSection {
     display: flex;
     flex-direction: column;
 }
 
-.footer-first-section > * {
+.firstSection > * {
     margin: 10px 0;
 }
 
-.footer-first-section p {
+.firstSection p {
     font-size: 1.3rem;
     margin-bottom: 15px;
 }
 
-.footer-first-section p span {
+.firstSection p span {
     font-weight: 600;
     color: #88E6F7;
 }
 
-.footer-first-section > div {
+.firstSection div {
     width: 250px;
     margin: 0 auto;
 }
 
-.footer-container nav {
+/* SECOND SECTION (NAV) */
+
+.secondSection {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,17 +50,17 @@
     border-bottom: 1px solid #BFDBFF;
 }
 
-.footer-logo {
+.logo {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-.footer-logo div > * {
+.logo div > * {
     margin: 0 10px 10px;
 }
 
-.footer-logo > div {
+.logo div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,39 +69,41 @@
     margin: 0 auto;
 }
 
-.footer-logo div p {
+.logo div p {
     font-size: 2.5rem;
     font-weight: 700;
 }
 
-.footer-logo p {
+.logo > p {
     font-size: 0.9rem;
     font-weight: 300;
 }
 
-.footer-rrss {
+.rrss {
     display: flex;
     width: 40%;
     justify-content: end;
 }
 
-.footer-rrss > div {
+.rrss div {
     min-width: 20px;
     max-width: 50px;
     margin: 0 3px;
 }
 
-.footer-second-section {
+/* THIRD SECTION */
+
+.thirdSection {
     display: flex;
     flex-direction: column;
 }
 
-.footer-second-section > * {
+.thirdSection > * {
     font-size: 0.7rem;
     margin: 5px 0;
 }
 
-.footer-second-section p span {
+.thirdSection p span {
     font-weight: 700;
 }
 
@@ -111,7 +117,9 @@
 
 @media screen and (min-width:768px) {
 
-    .footer-logo {
+    /* SECOND SECTION */
+
+    .logo {
         width: fit-content;
     }
 
@@ -121,30 +129,31 @@
   
 @media screen and (min-width:1200px) {
 
-    .footer-container > * {
+    .container > * {
         max-width: 1200px;
     }
 
-    .footer-first-section {
+    /* FIRST SECTION */
+
+    .firstSection {
         flex-direction: row;
         align-items: center;
     }
 
-    .footer-first-section p {
+    .firstSection p {
         width: 80%;
-    }
-
-    .footer-first-section div {
-        min-width: 250px;
-    }
-
-    .footer-first-section p {
         font-size: 1.8rem;
         text-align: start;
         margin-bottom: 15px;
     }
 
-    .footer-second-section {
+    .firstSection div {
+        min-width: 250px;
+    }
+
+    /* THIRD SECTION */
+
+    .thirdSection {
         flex-direction: row;
         justify-content: space-between;
     }

@@ -5,6 +5,11 @@
     /* LAYOUTS - Header */
     --header-bg: #014397; /* header background */
 
+    /* LAYOUTS - Footer */
+    --footer-bg: #014397; /* footer background */
+    --blue-footer-span: #88E6F7; /* footer span font color */
+    --blue-footer-border: #BFDBFF; /* footer border top & bottom */
+
     /* QUIZ */
     --blue-quiz-buttons: #2F8DD8; /* quiz buttons */
     --blue-quiz-box-shadow: #0083AC; /* quiz container shadow */
