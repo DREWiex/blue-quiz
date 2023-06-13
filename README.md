@@ -61,11 +61,9 @@ yarn dev
 
 ## Configuración
 
-Antes de ejecutar la aplicación, asegúrate de configurar correctamente la siguiente variable de entorno:
+Antes de ejecutar la aplicación, debes crear un archivo `.env`en la raíz del proyecto y configurar la siguiente variable de entorno:
 
 - `VITE_URL_BASE`: especificar el localhost.
-
-Puedes configurar esta variable de entorno creando un archivo `.env` en la raíz del proyecto y asignando los valores correspondientes.
 
 ---
 
@@ -109,7 +107,7 @@ Puedes configurar esta variable de entorno creando un archivo `.env` en la raíz
 
 ## Contacto
 
-Si tienes alguna pregunta, sugerencia o comentario, no dudes en contactarme. Puedes enviar un correo electrónico a [aleon88@gmail.com](mailto:aleon88@gmail.com).
+Si tienes alguna pregunta, sugerencia o comentario, no dudes en contactarme. Puedes enviar un correo electrónico a [dreweloper@gmail.com](mailto:dreweloper@gmail.com).
 
 Esperamos que disfrutes utilizando "Blue" y que te ayude a tomar conciencia sobre el consumo de agua y el cuidado del medioambiente. ¡Gracias por tu interés y contribución!
 
