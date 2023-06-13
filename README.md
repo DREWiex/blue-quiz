@@ -61,11 +61,9 @@ yarn dev
 
 ## Configuración
 
-Antes de ejecutar la aplicación, asegúrate de configurar correctamente la siguiente variable de entorno:
+Antes de ejecutar la aplicación, debes crear un archivo `.env`en la raíz del proyecto y configurar la siguiente variable de entorno:
 
 - `VITE_URL_BASE`: especificar el localhost.
-
-Para ello debes crear un archivo `.env` en la raíz del proyecto y asignarle el valor correspondiente.
 
 ---
 
