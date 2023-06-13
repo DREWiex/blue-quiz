@@ -1,0 +1,36 @@
+
+/* PERCENTAGES */
+
+.results-percentages {
+    display: flex;
+}
+
+.percentages-mobile {
+    display: flex;
+    height: 100%;
+}
+
+.percentages-web {
+    display: none;
+    height: 100%;
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+  
+@media screen and (min-width:768px) {
+
+    .percentages-mobile {
+        display: none;
+    }
+    
+    .percentages-web {
+        display: flex;
+    }
+  
+} /* 768px end */

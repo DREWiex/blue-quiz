@@ -1,0 +1,49 @@
+.footprint {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - (var(--height-standard)));
+    background: linear-gradient(var(--white-gradient), var(--blue-gradient));
+
+    & h1 {
+        text-align: center;
+    }
+
+    & article {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 30px auto;
+
+        & > * {
+            margin: 5px 0;
+        }
+
+        .numbers {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .footprint {
+        align-items: center;
+
+        & article {
+            align-items: center;
+        }
+    }
+  
+} /* 768px end */

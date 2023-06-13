@@ -1,0 +1,210 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--footer-bg);
+
+    & > * {
+        width: 90%;
+        padding: 20px 0;
+        margin: 0 auto;
+    }
+
+    /* FIRST SECTION */
+
+    .firstSection {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        & > * {
+            margin: 10px auto;
+        }
+
+        & p {
+            font-size: 1.3rem;
+
+            & span {
+                font-weight: 600;
+                color: var(--blue-footer-span);
+            }
+        }
+
+        & div {
+            width: 250px;
+        }
+    }
+
+    /* SECOND SECTION (NAV) */
+
+    .secondSection {
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        border-top: 1px solid var(--blue-footer-border);
+        border-bottom: 1px solid var(--blue-footer-border);
+
+        & > * {
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: start;
+            /* padding: 10px; */
+
+            & > div {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 10px;
+
+                & > * {
+                    margin: 0 5px;
+                }
+
+                & div {
+                    width: 60px;
+                }
+
+                & p {
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+            }
+
+            & > p {
+                font-size: 0.9rem;
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+
+        .rrss {
+            display: flex;
+            justify-content: end;
+            padding: 5px;
+
+            & div {
+                min-width: 20px;
+                max-width: 50px;
+                margin: 0 3px;
+            }
+        }
+    }
+
+    /* THIRD SECTION */
+
+    .thirdSection {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        & > * {
+            font-size: 0.7rem;
+            margin: 5px 0;
+
+            & p span {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+    /* SECOND SECTION */
+
+    .container .secondSection .logo > p {
+        text-align: start;
+    }
+
+} /* 768px end */
+
+/* 992px *************************/
+
+@media screen and (min-width:992px) {
+
+    /* THIRD SECTION */
+
+    .container .thirdSection {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+} /* 992px end */
+
+/* 1200px *************************/
+  
+@media screen and (min-width:1200px) {
+
+    .container {
+
+        & > * {
+            max-width: 1200px;
+        }
+
+        /* FIRST SECTION */
+
+        .firstSection {
+            flex-direction: row;
+            align-items: center;
+
+            & p {
+                width: 80%;
+                font-size: 1.8rem;
+                text-align: start;
+                margin-bottom: 15px;
+            }
+
+            & div {
+                min-width: 250px;
+            }
+        }
+
+        /* SECOND SECTION (NAV) */
+
+        .secondSection {
+
+            .logo {
+
+                & > div {
+
+                    & div {
+                        width: 70px;
+                    }
+
+                    & p {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                & > p {
+                    font-size: 1rem;
+                }
+            }
+
+            .rrss div {
+                width: 70px;
+            }
+        }
+
+        /* THIRD SECTION */
+
+        .thirdSection > * {
+            font-size: 0.8rem;
+        }
+    }
+  
+} /* 1200px end */
