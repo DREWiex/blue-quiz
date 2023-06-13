@@ -1,6 +1,6 @@
 # Blue
 
-El proyecto "Blue" es el resultado final desarrollado en conjunto por las verticales de Full Stack, UX/UI, Data Science y Ciberseguridad para el Desafío de Tripulaciones de la promoción de Enero 2023 en The Bridge. Se trata de un quiz interactivo que mide la huella hídrica de las personas que lo contestan, clasificándolas en función de su consumo como "Saver" (ahorrador) o "Spender" (gastador).
+El proyecto "Blue" es el resultado final desarrollado en conjunto por los alumnos de los bootcamps de Full Stack, UX/UI, Data Science y Ciberseguridad para el Desafío de Tripulaciones de la promoción de Enero 2023 en The Bridge. Se trata de un quiz interactivo que mide la huella hídrica de las personas que lo contestan, clasificándolas en función de su consumo como "Saver" (ahorrador) o "Spender" (gastador).
 
 El objetivo principal de "Blue" es concienciar a los usuarios sobre su consumo de agua y fomentar prácticas sostenibles. La aplicación realiza un seguimiento en tiempo real de los litros de agua que consume cada usuario por día y, al final del quiz, ofrece la posibilidad de reservar "SmartBlue" con un descuento del 40%. "SmartBlue" es un producto en fase de desarrollo que ayudará a ahorrar tanto agua como dinero a aquellos que lo adquieran.
 
