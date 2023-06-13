@@ -11,15 +11,29 @@ Además de medir la huella hídrica, "Blue" proporciona un informe final que mue
 - Quiz interactivo para medir la huella hídrica de los usuarios.
 - Clasificación de los usuarios como "Saver" o "Spender" según su consumo de agua.
 - Seguimiento en tiempo real de los litros de agua consumidos por día.
-- Utilización del componente `Wavify` para agregar el efecto de la ola que crece en función del consumo acumulado del usuario.
+- Utilización del componente `react-wavify` para agregar el efecto de la ola que crece en función del consumo acumulado del usuario.
 - Informe final con el resultado total de litros/día y euros gastados al año.
 - Propuesta de retos personalizados para ahorrar agua y dinero.
 - Enfoque en la concienciación y el cuidado del medioambiente.
 - Posibilidad de reservar "SmartBlue" con un descuento del 40%, producto que ayuda en el ahorro tanto de agua como dinero.
 
+## Despliegue
+
+La aplicación se encuentra desplegada y disponible en Netlify: [https://blue-quiz.netlify.app/](https://blue-quiz.netlify.app/).
+
 ## Capturas de pantalla
 
-_Inserta aquí capturas de pantalla del proyecto para mostrar su apariencia visual._
+#### Mobile
+
+| Blue Quiz - Intro | Blue Quiz - Question 9 | Blue Quiz - Challenges |
+| :-------------:| :-------------:| :-------------:|
+| ![Blue Quiz - Intro](/public/readme/01-quiz-mobile-intro.png) | ![Blue Quiz - Question](/public/readme/02-quiz-mobile-question.png) | ![Blue Quiz - Challenges](/public/readme/03-quiz-mobile-challenges.png) |
+
+#### Web
+
+| Blue Quiz - Question 11 |
+| :-------------:|
+| ![Blue Quiz - Question ](/public/readme/04-quiz-web-question.png) |
 
 ---
 
@@ -88,10 +102,15 @@ Puedes configurar esta variable de entorno creando un archivo `.env` en la raíz
 - Rodrigo Salata
 - Víctor Esteban
 
+#### Mentor
+- Alejandro Cárabe
+
+---
+
 ## Contacto
 
 Si tienes alguna pregunta, sugerencia o comentario, no dudes en contactarme. Puedes enviar un correo electrónico a [aleon88@gmail.com](mailto:aleon88@gmail.com).
 
 Esperamos que disfrutes utilizando "Blue" y que te ayude a tomar conciencia sobre el consumo de agua y el cuidado del medioambiente. ¡Gracias por tu interés y contribución!
 
-![Logo de Blue](/path/to/logo.png)
+![Blue logo](/public/readme/logo.png)
