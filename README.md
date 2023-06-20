@@ -73,9 +73,11 @@ Antes de ejecutar la aplicación, debes crear un archivo `.env`en la raíz del p
 - React
     - Vite
     - Redux
-    - JSX
     - CSS Modules
+    - JSX
+- Jest
 - JavaScript
+- Yarn
 
 ---
 
