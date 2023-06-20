@@ -12,6 +12,7 @@ Además de medir la huella hídrica, "Blue" proporciona un informe final que mue
 - Clasificación de los usuarios como "Saver" o "Spender" según su consumo de agua.
 - Seguimiento en tiempo real de los litros de agua consumidos por día.
 - Utilización del componente `react-wavify` para agregar el efecto de la ola que crece en función del consumo acumulado del usuario.
+- Paginación funcional de las preguntas en el nav del quiz.
 - Informe final con el resultado total de litros/día y euros gastados al año.
 - Propuesta de retos personalizados para ahorrar agua y dinero.
 - Enfoque en la concienciación y el cuidado del medioambiente.
@@ -70,10 +71,13 @@ Antes de ejecutar la aplicación, debes crear un archivo `.env`en la raíz del p
 ## Tecnologías utilizadas
 
 - React
-- Redux
-- HTML5
-- CSS3
+    - Vite
+    - Redux
+    - CSS Modules
+    - JSX
+- Jest
 - JavaScript
+- Yarn
 
 ---
 
